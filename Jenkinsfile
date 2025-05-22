@@ -11,8 +11,9 @@ pipeline {
     stage("Deploy") {
       steps {
         echo "Deploying HTML..."
-        sh "mkdir -p /var/www/html/jenkins-demo"
-        sh "cp index.html /var/www/html/jenkins-demo/index.html"
+        sh "mkdir -p jenkins-demo"
+        sh "cp index.html jenkins-demo/index.html"
+        echo "HTML copied to workspace directory."
       }
     }
   }
